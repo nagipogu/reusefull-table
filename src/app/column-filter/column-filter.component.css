@@ -1,0 +1,69 @@
+.selectedCol{
+    height: 200px;
+    background: #fff;
+    position: absolute;
+    width: 100%;
+    min-width: 192px;
+    z-index: 2;
+    right: -14px;
+    top: 27px;
+    margin: 10px;
+    border: solid 1px #eee;
+    text-align: left;
+    padding: 6px 0px 3px 7px;
+}
+.options{
+    cursor: pointer;
+}
+.table.info-table tr td, .table.info-table tr th, table.info-table tr td, table.info-table tr th {
+    text-align: right !important;
+}
+
+.filter-btn-wrap {
+    position: absolute;
+    top: 86%;
+    padding: 8px 0;
+    width: 100%;
+    background: #FFF;
+    text-align: right;
+    left: 0%;
+    border-top: 0px solid #FFF;
+}
+
+.filter-btn-wrap button {
+    margin: 0 5px;
+}
+
+.filter-items {
+    height: 132px;
+    overflow-y: scroll;
+}
+ 
+
+[disabled] {
+    opacity: 0.5; 
+    cursor: not-allowed;
+    padding: 1em; 
+    background:#6c757d;
+    color:white;
+}
+.btn.btn-xs {
+    height: 25px;
+    max-height: 25px;
+    padding: 0 10px;
+    line-height: 1;
+    font-size: .75rem;
+}
+.searchBox{
+    width: 100%!important;
+    border: 2px solid #d2d4d6;
+    padding: 1%;
+    margin: -1%;
+    
+}
+.search{
+    width: 99%;
+    margin: 0px;
+    padding: 2px;
+    margin-bottom: 7px;
+}

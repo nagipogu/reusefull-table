@@ -1,0 +1,39 @@
+.main-loader, .main-loader-msg {
+    left: calc(50% - 50px);
+    top: 20%;
+    color: #FFF !important;
+    position: fixed;
+}
+
+
+.main-loader-msg {
+    top: 45%;
+    left: calc(43% - 50px);
+}
+ 
+.main-loader .spinner-loader {
+    margin: 0 auto !important;
+    display: block !important;
+}
+
+.main-loader, .main-loader-msg {
+    left: calc(50% - 50px);
+    top: 60%!important;
+    color: #FFF !important;
+    position: fixed;
+}
+.modal-backdrop {
+
+    top: 150px;
+    left: 1.4%;
+}
+
+.modal-backdrop.show {
+    opacity: 0!important;
+}
+.modal-backdrop.show {
+    opacity: 0.0;
+    left: 15% ;
+    right: 30% !important;
+}
+

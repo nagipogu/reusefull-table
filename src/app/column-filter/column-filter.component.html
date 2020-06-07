@@ -1,0 +1,29 @@
+
+<div class="selectedCol">
+    <div class="search">
+        <input type="text" class="mdi mdi-magnify searchBox "
+            [disabled]="!(this.column.filters.searchFilter) ? 'disabled': null" (ngModelChange)="search($event)"
+            placeholder="Search" [(ngModel)]="searchText" />
+    </div>
+    <div>
+
+        <div [ngClass]="{hide:!columnFilter.display, 'filter-items': true}">
+            <label><input type="checkbox" [(ngModel)]="isSelectedAll" (change)="selectAll(isSelectedAll)" />
+                SelectAll
+            </label>
+
+            <div *ngFor="let filterItem of columnFilter.items" [ngClass]="{hide:!columnFilter.display}">
+                <label><input type="checkbox" [(ngModel)]="filterItem.isSelected"
+                        (change)="change(filterItem.isSelected)" />
+                    {{filterItem.value}}
+                </label>
+            </div>
+        </div>
+        <div class="filter-btn-wrap">
+            <button class="btn btn-primary btn-xs" (click)="selectedOption(isSelectedAll)"
+                [disabled]="!disableOkButton ? 'disabled': null">Ok</button>
+            <button [ngClass]="{hide:!columnFilter.display}" class="btn btn-danger btn-xs"
+                (click)="cancel()">Cancel</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div
+    *ngIf="loading"
+    [config]="{ show: true, keyboard: false, ignoreBackdropClick: true }"
+    bsModal
+    class="modal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="dialog-auto-name"
+>
+    <div class="modal-dialog modal-sm">
+        <div class="main-loader">
+            <div
+                *ngIf="loading"
+                class="spinner-border text-primary"
+                role="status"
+            >
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <span *ngIf="message" class="main-loader-msg">Please wait! We are processing the file</span>
+    </div>
+</div>

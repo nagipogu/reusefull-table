@@ -1,0 +1,67 @@
+<div class="col-lg-12 filter">
+
+    <div class="grid">
+        <div class="item-wrapper">
+
+            <div class="table-responsive">
+                <table class="table info-table table-striped">
+                    <thead>
+                        <tr>
+                            <th *ngFor="let column of columnDef" class="columns">
+                                <div class="row">
+                                    <div class="div-th" *ngIf="column.type !=='select'">
+                                        {{column.headerName}}
+                                        <i class="mdi" (click)="sortColumn(column.field, columnDef)" [ngClass]="{
+                                  'mdi-sort-ascending': !column.currentSort || column.currentSort === 'asc',
+                                  'mdi-sort-descending': column.currentSort === 'desc',
+                                  'mdi-sort-ascending-disabled': !column.currentSort
+                                  }">
+                                        </i>
+
+                                        <i class="mdi mdi-filter" (click)="toggleColumnFilter(column.field)">ll
+                                        </i>
+
+                                    </div>
+
+                                    <app-column-filter *ngIf="columnFilter.selectedColumn === column.field"
+                                        [ngClass]="{hide:!columnFilter.display}"
+                                        [columnFilter]="columnFilter.data[column.field]" [rowData]="rowData"
+                                        [columnField]="column.field" [hideCancelButton]="hideCancelButton"
+                                        (applyColumnFilter)="applyColumnFilter($event)" (display)="display()"
+                                        [isSelectedAll]="isSelectedAll" [column]="column">
+                                    </app-column-filter>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <app-data-grid-loader [loading]="loader"></app-data-grid-loader>
+                        <tr *ngFor="let row of rowData">
+
+                            <td *ngFor="let col of columnDef" class="text-left data-grid-cell">
+                                <div class="cellPadding" *ngIf="col.percentageFill==true"
+                                    [style.background-color]="col.cellBackgroundColor(row[col.field])"
+                                    [style.max-width]="col.cellValue(row[col.field])"
+                                    tooltip="{{col.cellValue(row[col.field])}}" placement="bottom">
+                                    {{col.cellValue(row[col.field])}}
+                                </div>
+
+                                <div *ngIf="col.cellRenderer" tooltip="{{row[col.field]}}" placement="bottom">
+                                    <span [attr.class]="col.cellIcon(row[col.field])" class="cellRendererIcon"
+                                        style="font-size: 22px !important;"
+                                        [style.color]="col.cellBackgroundColor(row[col.field])"></span>
+                                </div>
+
+                                <div class="percent" *ngIf="!col.percentageFill&&!col.cellRenderer"
+                                    tooltip="{{row[col.field]}}" placement="bottom">
+                                    {{row[col.field]}}
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

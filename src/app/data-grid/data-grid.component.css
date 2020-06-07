@@ -1,0 +1,128 @@
+.filter .mdi {
+    color: #0A79DF;
+}
+.filter .table .div-th {
+    padding: 0 10px;
+    cursor: pointer;
+}
+.mdi-sort-ascending-disabled {
+    color: grey !important;
+}
+
+.filter[_ngcontent-sew-c7] .table[_ngcontent-sew-c7] .div-th[_ngcontent-sew-c7] {
+    padding: 0 10px;
+    cursor: pointer;
+    
+}
+.filter[_ngcontent-vvj-c6] .mdi[_ngcontent-vvj-c6] {
+    color: #b3b3b3;
+}
+.div-th{
+    cursor: pointer;
+    padding-right: 0px !important;
+    padding-left: 10px;
+
+}
+.hide {
+    display: none;
+}
+ .table-responsive{
+    min-height:500px;
+ }
+.table{
+    position:relative;
+}
+.columns{
+    position: relative;
+}
+.filterss{
+    position: absolute !important; 
+    right:0!important;
+}
+.link-button {
+    float: right;
+    display: block;
+    margin-right: 0px;
+    cursor: pointer;
+    clear: left;
+    margin-left: 1em;
+  }
+   
+  [disabled] {
+    opacity: 0.5; 
+    cursor: not-allowed;
+    padding: 10px; 
+    background:#fff;
+    color:white;
+    pointer-events: none;
+    margin-top: -5px;
+    top: -4%;
+    margin-top: -5px
+}
+table tr td:nth-of-type(3) {
+    min-width: 10px !important;
+    max-width: 20px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important;
+}
+table tr td:nth-of-type(2) {
+    min-width: 10px !important;
+    max-width: 20px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important;
+}
+table tr td:nth-of-type(1) {
+    min-width: 10px !important;
+    max-width: 10px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important;
+}
+table tr td:nth-of-type(8) {
+    min-width: 2px !important;
+    max-width: 3px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important;
+}
+
+
+ .btn.action-btn i:before {
+    width: inherit;
+    height: inherit;
+    line-height: inherit;
+    font-size: inherit;
+    margin-top: -10px !important;
+}
+ 
+.cellPadding{
+    padding: 6px 0;
+}
+
+.mdi-filter{
+    font-size: 12px; color: #b3b3b3!important;
+}
+.percent{
+    white-space: nowrap !important;
+    overflow: hidden !important; 
+    text-overflow: ellipsis !important;
+}
+:host >>> .tooltip-inner {
+    background-color: gray;
+    color: #fff;
+  }
+  :host >>> .tooltip.bottom .tooltip-arrow:before,
+  :host >>> .tooltip.bottom .tooltip-arrow {
+    border-bottom-color: gray;
+  }
+  :host >>> .tooltip.top .tooltip-arrow:before,
+  :host >>> .tooltip.top .tooltip-arrow {
+    border-top-color: gray;
+  }
+  .data-grid-cell{
+      padding:0px !important;
+      margin: 0 !important;
+      cursor:pointer;
+  }
